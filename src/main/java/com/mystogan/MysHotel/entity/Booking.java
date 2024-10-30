@@ -24,12 +24,11 @@ public class Booking {
     private LocalDate checkOutDate;
 
     @Min(value = 1, message = "Number of adults must not be less than that 1")
-
     private int numOfAdults;
 
     @Min(value = 0, message = "Number of children must not be less than that 0")
-
     private int numOfChildren;
+
     private int totalNumOfGuest;
     private String bookingConfirmationCode;
 
