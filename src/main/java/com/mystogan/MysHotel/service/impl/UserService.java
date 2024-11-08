@@ -45,7 +45,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error Occurred During User Registration" + e.getMessage());
+            response.setMessage("Error Occurred During User Registration: " + e.getMessage());
         }
         return response;
     }
@@ -68,7 +68,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error Occurred During User Login" + e.getMessage());
+            response.setMessage("Error Occurred During User Login: " + e.getMessage());
         }
         return response;
     }
@@ -85,7 +85,7 @@ public class UserService implements IUserService {
             response.setUserList(userDTOList);
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error getting all users" + e.getMessage());
+            response.setMessage("Error getting all users: " + e.getMessage());
         }
         return response;
     }
@@ -104,7 +104,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error getting booking history" + e.getMessage());
+            response.setMessage("Error getting booking history: " + e.getMessage());
         }
         return response;
     }
@@ -122,7 +122,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error Deleting User" + e.getMessage());
+            response.setMessage("Error Deleting User: " + e.getMessage());
         }
         return response;
     }
@@ -141,7 +141,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error Getting User" + e.getMessage());
+            response.setMessage("Error Getting User By Id: " + e.getMessage());
         }
         return response;
     }
@@ -160,7 +160,7 @@ public class UserService implements IUserService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error Getting User" + e.getMessage());
+            response.setMessage("Error Getting User Info: " + e.getMessage());
         }
         return response;
     }

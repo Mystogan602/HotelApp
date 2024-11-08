@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("rooms")
+@RequestMapping("/rooms")
 @RequiredArgsConstructor
 public class RoomController {
     private final IRoomService roomService;
@@ -78,7 +78,7 @@ public class RoomController {
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
 
-    @PutMapping("update/{roomId}")
+    @PutMapping("/update/{roomId}")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     public ResponseEntity<Response> updateRoom(
             @PathVariable Long roomId,

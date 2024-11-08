@@ -47,6 +47,7 @@ public class BookingService implements IBookingService {
             String bookingConfirmationCode = Utils.generateRandomConfirmationCode(10);
             bookingRequest.setBookingConfirmationCode(bookingConfirmationCode);
             bookingRepository.save(bookingRequest);
+            response.setStatusCode(200);
             response.setMessage("Successful");
             response.setBookingConfirmationCode(bookingConfirmationCode);
 

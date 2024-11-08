@@ -21,9 +21,9 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class RoomService implements IRoomService {
-    private RoomRepository roomRepository;
-    private BookingRepository bookingRepository;
-    private AwsS3Service awsS3Service;
+    private final RoomRepository roomRepository;
+    private final BookingRepository bookingRepository;
+    private final AwsS3Service awsS3Service;
 
     @Override
     public Response addNewRoom(MultipartFile photo, String roomType, BigDecimal roomPrice, String description) {
@@ -42,7 +42,7 @@ public class RoomService implements IRoomService {
             response.setRoom(roomDTO);
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error adding a new room: " + e.getMessage());
         }
         return response;
     }
@@ -63,7 +63,7 @@ public class RoomService implements IRoomService {
             response.setRoomList(roomDTOList);
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error getting all rooms" + e.getMessage());
+            response.setMessage("Error getting all rooms: " + e.getMessage());
         }
         return response;
     }
@@ -81,7 +81,7 @@ public class RoomService implements IRoomService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error deleting a room: " + e.getMessage());
         }
         return response;
     }
@@ -112,7 +112,7 @@ public class RoomService implements IRoomService {
             response.setMessage(e.getMessage());
         } catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error updating a room: " + e.getMessage());
         }
         return response;
     }
@@ -134,7 +134,7 @@ public class RoomService implements IRoomService {
         }
         catch (Exception e) {
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error getting a room by id: " + e.getMessage());
         }
         return response;
     }
@@ -151,7 +151,7 @@ public class RoomService implements IRoomService {
         }
         catch (Exception e){
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error getting available rooms by date and type: " + e.getMessage());
         }
         return response;
     }
@@ -168,7 +168,7 @@ public class RoomService implements IRoomService {
         }
         catch (Exception e){
             response.setStatusCode(500);
-            response.setMessage("Error saving a room" + e.getMessage());
+            response.setMessage("Error getting all available rooms: " + e.getMessage());
         }
         return response;
     }
