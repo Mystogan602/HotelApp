@@ -92,8 +92,8 @@ export default class ApiService {
         return response.data
     }
 
-    //This gets all room types from the database
-    static async getAllRoomTypes() {
+    //This gets room types from the database
+    static async getRoomTypes() {
         const response = await axios.get(`${this.BASE_URL}/rooms/types`)
         return response.data
     }
