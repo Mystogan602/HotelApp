@@ -1,4 +1,5 @@
 import React from 'react'
+import './ServiceCard.scss'
 
 const ServiceCard = ({ imageUrl, imageAlt, title, description }) => {
   return (
