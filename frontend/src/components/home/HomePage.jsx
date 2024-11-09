@@ -1,7 +1,8 @@
 import React from 'react'
 import RoomResult from "../common/RoomResult"
-import RoomSearch from "../common/RoomSearch"
-import ServiceCard from '../common/ServiceCard'
+import RoomSearch from "../common/RoomSearch/RoomSearch"
+import ServiceCard from '../common/ServiceCard/ServiceCard'
+import './HomePage.scss'
 
 const HomePage = () => {
   const [roomSearchResult, setRoomSearchResult] = useState([]);
@@ -12,16 +13,16 @@ const HomePage = () => {
   }
 
   return (
-    <div className='home-page'>
+    <div className='home'>
       {/* HEADER/ BANNER ROOM SECTION */}
       <section>
         <header className='header-banner'>
           <img src="./assets/images/hotel.webp" alt="Mys hotel" className='header-image' />
           <div className='overlay'></div>
-          <div className='animated-text overlay-content'>
+          <div className='animated-texts overlay-content'>
             <h1>Welcome to <span className='mys-color'>Mys Hotel</span></h1>
             <br />
-            <p>Experience luxury and comfort at our hotel</p>
+            <h3>Experience luxury and comfort at our hotel</h3>
           </div>
         </header>
       </section>
@@ -36,25 +37,25 @@ const HomePage = () => {
 
       {/* SERVICES SECTION */}
       <section className='services-section'>
-        <ServiceCard 
+        <ServiceCard
           imageUrl="./assets/images/ac.png"
           imageAlt="Air Conditioning"
           title="Air Conditioning"
           description="Stay cool and comfortable throughout your stay with our individually controlled in-room air conditioning"
         />
-        <ServiceCard 
+        <ServiceCard
           imageUrl="./assets/images/mini-bar.png"
           imageAlt="Mini Bar"
           title="Mini Bar"
           description="Enjoy a refreshing drink or snack from our well-stocked mini bar with no additional cost."
         />
-        <ServiceCard 
+        <ServiceCard
           imageUrl="./assets/images/parking.png"
           imageAlt="Parking"
           title="Parking"
           description="Secure and convenient parking is available on site for our guests. Please inquire about valet parking options if available"
         />
-        <ServiceCard 
+        <ServiceCard
           imageUrl="./assets/images/wifi.png"
           imageAlt="Wifi"
           title="Wifi"

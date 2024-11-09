@@ -1,0 +1,69 @@
+.home {
+    margin-bottom: 100px;
+}
+
+// HEADER OVERLAY
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    justify-content: flex-start;
+}
+
+// HEADER BANNER
+.header-banner{
+    // background-image: url('../../assets/images/hotel.webp');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.header-banner h1{
+    font-size: 50px;
+    color: #f8f3f3;
+}
+
+.header-banner h3{
+    font-size: 30px;
+    color: #f8f3f3;
+}
+
+//view all rooms home section
+.view-rooms-home{
+    margin: 15px 0 0 4.6rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ff7f50;
+    text-decoration: underline;
+}
+
+// home services section
+.home-services{
+    font-weight: 800;
+    color: #007F86;
+    text-align: center;
+    margin: 5px auto 30px auto;
+}
+
+.mys-color{
+    color: #ff007f;
+    color: #ff7f50;
+}
+
+.services-section{
+    margin: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
