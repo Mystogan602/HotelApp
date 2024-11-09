@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import ApiService from '../../service/ApiService'
+import ApiService from '../../../service/ApiService'
+import './RoomSearch.scss'
 
 const RoomSearch = ({ handleSearchResult }) => {
     const [startDate, setStartDate] = useState(null);
