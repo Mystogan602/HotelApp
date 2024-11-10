@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import ApiService from '../../service/ApiService'
+import ApiService from '../../../service/ApiService'
 import './RoomResult.scss'
 
 const RoomResult = ({ roomSearchResult }) => {

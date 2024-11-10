@@ -1,8 +1,9 @@
-import React from 'react'
-import RoomResult from "../common/RoomResult"
+import React, { useState } from 'react'
+import RoomResult from "../common/RoomResult/RoomResult"
 import RoomSearch from "../common/RoomSearch/RoomSearch"
 import ServiceCard from '../common/ServiceCard/ServiceCard'
 import './HomePage.scss'
+
 
 const HomePage = () => {
   const [roomSearchResult, setRoomSearchResult] = useState([]);
