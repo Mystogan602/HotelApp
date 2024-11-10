@@ -6,17 +6,19 @@ import './RoomResult.scss'
 const RoomResult = ({ roomSearchResult }) => {
     const navigate = useNavigate();
     const isAdmin = ApiService.isAdmin();
+    console.log(roomSearchResult);
     return (
         <section className='room-result'>
             {roomSearchResult && roomSearchResult.length > 0 && (
                 <div className='room-list'>
                     {roomSearchResult.map((room) => (
+                        
                         <div className='room-item' key={room.id}>
-                            <img className='room-image' src={room.image} alt={room.roomType} />
+                            <img className='room-image' src={room.roomPhotoUrl} alt={room.roomType} />
                             <div className='room-details'>
                                 <h3>{room.roomType}</h3>
-                                <p>Price: ${room.price}</p>
-                                <p>Description: {room.description}</p>
+                                <p>Price: ${room.roomPrice}</p>
+                                <p>Description: {room.roomDescription}</p>
                             </div>
 
                             <div className='book-now-div'>
