@@ -26,13 +26,12 @@ const Navbar = () => {
                 <li><NavLink to="/home" activeClass="active">Home</NavLink></li>
                 <li><NavLink to="/rooms" activeClass="active">Rooms</NavLink></li>
                 <li><NavLink to="/find-booking" activeClass="active">Find Booking</NavLink></li>
+                {isUser && <li><NavLink to="/profile" activeClass="active">Profile</NavLink></li>}
+                {isAdmin && <li><NavLink to="/admin" activeClass="active">Admin</NavLink></li>}
+                {!isAuthenticated && <li><NavLink to="/login" activeClass="active">Login</NavLink></li>}
+                {!isAuthenticated && <li><NavLink to="/register" activeClass="active">Register</NavLink></li>}
+                {isAuthenticated && <li onClick={handleLogout}>Logout</li>}
             </ul>
-
-            {isUser && <li><NavLink to="/profile" activeClass="active">Profile</NavLink></li>}
-            {isAdmin && <li><NavLink to="/admin" activeClass="active">Admin</NavLink></li>}
-            {!isAuthenticated && <li><NavLink to="/login" activeClass="active">Login</NavLink></li>}
-            {!isAuthenticated && <li><NavLink to="/register" activeClass="active">Register</NavLink></li>}
-            {isAuthenticated && <li onClick={handleLogout}>Logout</li>}
         </nav>
     )
 }

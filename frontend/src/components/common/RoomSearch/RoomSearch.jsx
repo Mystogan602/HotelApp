@@ -66,6 +66,7 @@ const RoomSearch = ({ handleSearchResult }) => {
                         onChange={(date) => setStartDate(date)}
                         dateFormat='dd-MM-yyyy'
                         placeholderText='Select check-in date'
+                        wrapperClassName="date-picker-wrapper"
                     />
                 </div>
                 <div className='search-fields'>
@@ -75,6 +76,7 @@ const RoomSearch = ({ handleSearchResult }) => {
                         onChange={(date) => setEndDate(date)}
                         dateFormat='dd-MM-yyyy'
                         placeholderText='Select check-out date'
+                        wrapperClassName="date-picker-wrapper"
                     />
                 </div>
                 <div className='search-fields'>
