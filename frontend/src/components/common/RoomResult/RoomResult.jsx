@@ -6,7 +6,7 @@ import './RoomResult.scss'
 const RoomResult = ({ roomSearchResult }) => {
     const navigate = useNavigate();
     const isAdmin = ApiService.isAdmin();
-    console.log(roomSearchResult);
+  
     return (
         <section className='room-result'>
             {roomSearchResult && roomSearchResult.length > 0 && (
