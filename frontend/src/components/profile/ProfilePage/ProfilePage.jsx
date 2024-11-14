@@ -1,7 +1,9 @@
 import React from 'react'
 import './ProfilePage.scss'
 import ApiService from '../../../service/ApiService'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 const ProfilePage = () => {
     const [user, setUser] = useState(null)
     const [error, setError] = useState(null)
